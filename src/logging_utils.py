@@ -1,23 +1,27 @@
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
-import seaborn as sns
+import numpy as np
 import mlflow
 
 
 def plot_confusion_matrix(
-        y, y_pred, style="tableau-colorblind10", plot_size=(8, 8)):
+        y, y_pred, plot_size=(8, 8)):
 
     cm = confusion_matrix(y, y_pred)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    im = ax.imshow(cm, interpolation='nearest', cmap='Blues')
+    ax.set_title('Confusion Matrix')
+    plt.colorbar(im, ax=ax)
 
-    with plt.style.context(style=style):
-        fig, ax = plt.subplots(figsize=plot_size)
-        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax)
+    thresh = cm.max() / 2.
+    for i, j in np.ndindex(cm.shape):
+        ax.text(j, i, format(cm[i, j], 'd'),
+                ha="center", va="center",
+                color="white" if cm[i, j] > thresh else "black")
 
-        ax.set_xlabel('Predicted')
-        ax.set_ylabel('True')
-        ax.set_title('Confusion Matrix')
-
-        plt.tight_layout()
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('True')
+    plt.tight_layout()
     plt.close(fig)
     return fig
 

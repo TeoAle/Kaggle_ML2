@@ -1,6 +1,0 @@
-artifact_location: mlflow-artifacts:/878289205600432043
-creation_time: 1708177109229
-experiment_id: '878289205600432043'
-last_update_time: 1708177109229
-lifecycle_stage: active
-name: First Optuna Experiment
