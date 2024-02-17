@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/878289205600432043/77c50b9623f64e5a9521b60d43b53e08/artifacts
+end_time: 1708177208458
+entry_point_name: ''
+experiment_id: '878289205600432043'
+lifecycle_stage: active
+run_id: 77c50b9623f64e5a9521b60d43b53e08
+run_name: legendary-dove-962
+run_uuid: 77c50b9623f64e5a9521b60d43b53e08
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708177203198
+status: 3
+tags: []
+user_id: carlo
