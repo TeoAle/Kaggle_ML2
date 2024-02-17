@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/878289205600432043/bc0504b32d7041f6bd3fa8cb5b2e0303/artifacts
+end_time: 1708177151730
+entry_point_name: ''
+experiment_id: '878289205600432043'
+lifecycle_stage: active
+run_id: bc0504b32d7041f6bd3fa8cb5b2e0303
+run_name: defiant-bee-944
+run_uuid: bc0504b32d7041f6bd3fa8cb5b2e0303
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708177129917
+status: 3
+tags: []
+user_id: carlo

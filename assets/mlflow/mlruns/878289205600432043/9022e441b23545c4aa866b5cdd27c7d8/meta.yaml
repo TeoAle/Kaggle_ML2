@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/878289205600432043/9022e441b23545c4aa866b5cdd27c7d8/artifacts
+end_time: 1708177129894
+entry_point_name: ''
+experiment_id: '878289205600432043'
+lifecycle_stage: active
+run_id: 9022e441b23545c4aa866b5cdd27c7d8
+run_name: honorable-foal-503
+run_uuid: 9022e441b23545c4aa866b5cdd27c7d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708177114895
+status: 3
+tags: []
+user_id: carlo
