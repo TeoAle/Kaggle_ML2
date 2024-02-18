@@ -20,7 +20,7 @@ def load_elu_data(PATH: str) -> pd.DataFrame:
     # TODO: add docstring
     """
     elu_data_raw = pd.read_csv(
-        '..//data//num_to_elu.txt', sep=":", header=None)
+        os.path.join(PATH, 'num_to_elu.txt'), sep=":", header=None)
     elu_data_raw['ELU'] = elu_data_raw[1].str[5:9]
 
     # compute climatic and geologic zone from ELU code
