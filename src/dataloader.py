@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import os
 
 
@@ -38,7 +39,8 @@ def load_elu_data(PATH: str) -> pd.DataFrame:
 def load_train_df(
         PATH: str,
         decode_dummies: bool = True,
-        add_geo_features: bool = True  # ignored if decode_dummies is False
+        add_geo_features: bool = True,  # ignored if decode_dummies is False
+        add_distance_hydrology: bool = True
 ) -> pd.DataFrame:
 
     df = load_raw_df(PATH)
@@ -58,4 +60,8 @@ def load_train_df(
     num_cols = df.select_dtypes(include=['number']).columns
     df[num_cols] = df[num_cols].astype('float64')
 
+    if add_distance_hydrology:
+        df['Distance_To_Hydrology'] = np.sqrt(
+            df.Horizontal_Distance_To_Hydrology**2 +
+            df.Vertical_Distance_To_Hydrology**2)
     return df
